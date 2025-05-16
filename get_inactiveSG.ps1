@@ -10,7 +10,7 @@ ForEach ($sec_group in $sec_groups) {
     $members = $sec_group.Members
     $memberOf = $sec_group.MemberOf
 
-    if ($year_modified -ne $year -and $canonicalname -like "*/OSS SEC GROUP/*") {
+    if ($year_modified -ne $year -and $canonicalname -like "* SEC GROUP/*") {
         if($members.count -eq 0 -and $memberOf.count -eq 0){
             Write-Host "Name               : $name"
             Write-Host "Canonical Name     : $canonicalname"
